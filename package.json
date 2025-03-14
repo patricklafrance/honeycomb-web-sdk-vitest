@@ -1,0 +1,36 @@
+{
+    "name": "honeycomb-web-sdk-vitest",
+    "version": "0.0.0",
+    "private": true,
+    "type": "module",
+    "license": "Apache-2.0",
+    "scripts": {
+        "test": "vitest --config vitest.config.ts --no-watch",
+        "clean": "pnpm -r --parallel --include-workspace-root exec pnpm dlx rimraf dist node_modules/.cache",
+        "reset": "pnpm run --sequential \"/^reset:.*/\"",
+        "reset:clean": "pnpm clean",
+        "reset:delete-node-modules": "pnpm -r --parallel --include-workspace-root exec pnpm dlx rimraf node_modules pnpm-lock.yaml"
+    },
+    "dependencies": {
+        "@workleap/honeycomb": "2.1.1",
+        "@honeycombio/opentelemetry-web": "0.13.0",
+        "@opentelemetry/api": "1.9.0",
+        "@opentelemetry/auto-instrumentations-web": "0.45.1",
+        "@opentelemetry/instrumentation-document-load": "0.44.1",
+        "@opentelemetry/instrumentation-fetch": "0.200.0-rc.1",
+        "@opentelemetry/instrumentation-user-interaction": "0.44.1",
+        "@opentelemetry/instrumentation-xml-http-request": "0.57.2",
+        "@opentelemetry/sdk-trace-web": "1.30.1"
+    },
+    "devDependencies": {
+        "@workleap/typescript-configs": "3.0.2",
+        "happy-dom": "17.4.4",
+        "typescript": "5.8.2",
+        "vitest": "3.0.8"
+    },
+    "engines": {
+        "node": ">=22.0.0",
+        "pnpm": ">=9"
+    },
+    "packageManager": "pnpm@9.15.4"
+}
