@@ -1,5 +1,7 @@
 # honeycomb-web-sdk-vitest
 
+Reproduction for issue https://github.com/honeycombio/honeycomb-opentelemetry-web/issues/480.
+
 To reproduce the error, open a console at the root of the workspace and execute the following command:
 
 ```bash
